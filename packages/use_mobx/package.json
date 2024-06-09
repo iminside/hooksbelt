@@ -1,7 +1,7 @@
 {
 	"name": "@hooksbelt/use-mobx",
 	"description": "mobx hooks",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Denis Churbanov",
 	"license": "MIT",
 	"repository": {
