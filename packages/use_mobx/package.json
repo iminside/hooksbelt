@@ -27,6 +27,10 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"mobx": "^6"
+		"mobx": "^6",
+		"react": "^18"
+	},
+	"devDependencies": {
+		"@types/react": "^18"
 	}
 }

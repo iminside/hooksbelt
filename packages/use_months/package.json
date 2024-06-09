@@ -27,6 +27,10 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@hooksbelt/use-intl": "^0.1.2"
+		"@hooksbelt/use-intl": "^0.1.2",
+		"react": "^18"
+	},
+	"devDependencies": {
+		"@types/react": "^18"
 	}
 }
