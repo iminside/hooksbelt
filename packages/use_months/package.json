@@ -1,0 +1,32 @@
+{
+	"name": "@hooksbelt/use-months",
+	"description": "useMonths hook",
+	"version": "0.1.0",
+	"author": "Denis Churbanov",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iminside/hooksbelt.git",
+		"directory": "packages/core"
+	},
+	"main": "dist/index.cjs.js",
+	"module": "dist/index.esm.js",
+	"typings": "dist/index.d.ts",
+	"scripts": {
+		"start": "rollup -c -w",
+		"build": "rollup -c && tsc -p ./tsconfig.build.json",
+		"test": "jest",
+		"test:coverage": "jest --coverage",
+		"test:uncache": "jest --clearCache"
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"@hooksbelt/use-intl": "^0.1.0"
+	}
+}

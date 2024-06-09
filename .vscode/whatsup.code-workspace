@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "@hooksbelt",
+			"path": "../"
+		},
+		{
+			"name": "use_mobx",
+			"path": "../packages/use_mobx"
+		},
+		{
+			"name": "use_intl",
+			"path": "../packages/use_intl"
+		},
+		{
+			"name": "use_timer",
+			"path": "../packages/use_timer"
+		},
+		{
+			"name": "use_months",
+			"path": "../packages/use_months"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"node_modules": false,
+			"packages": true
+		},
+		"jest.jestCommandLine": "npm test --",
+		"jest.disabledWorkspaceFolders": ["@hooksbelt", "hooksbelt", "cli", "typescript-plugin-cssx"],
+		"typescript.tsdk": "@hooksbelt\\node_modules\\typescript\\lib"
+	}
+}
