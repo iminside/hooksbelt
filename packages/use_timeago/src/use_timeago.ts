@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 
 export type UseTimeagoOptions = {
-	style: 'default' | 'twitter'
-	hourCycle: 'h11' | 'h12' | 'h23' | 'h24'
+	style?: 'default' | 'twitter'
+	hourCycle?: 'h11' | 'h12' | 'h23' | 'h24'
 }
 
 export const useTimeago = (locale: string, options: UseTimeagoOptions = { style: 'default', hourCycle: 'h23' }) => {
