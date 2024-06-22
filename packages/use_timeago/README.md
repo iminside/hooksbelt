@@ -1,1 +1,1 @@
-# @hooksbelt/use-timer
+# @hooksbelt/use-timeago
