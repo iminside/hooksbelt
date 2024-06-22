@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { DependencyList, useMemo } from 'react'
 
 interface DateTimeFormatOptions extends Intl.DateTimeFormatOptions {
 	type: 'DateTime'
@@ -20,22 +20,19 @@ type Result<P extends Params> = {
 		: never
 }
 
-export const useIntl = <P extends Params>(locales: string | string[], optionsMap: P) => {
-	return useMemo(
-		() => {
-			const result = {} as { [k: string]: (...args: any[]) => any }
+export const useIntl = <P extends Params>(locales: string | string[], optionsMap: P, deps = [] as DependencyList) => {
+	return useMemo(() => {
+		const result = {} as { [k: string]: (...args: any[]) => any }
 
-			for (const [key, params] of Object.entries(optionsMap)) {
-				if (params.type === 'DateTime') {
-					result[key] = new Intl.DateTimeFormat(locales, params).format
-				}
-				if (params.type === 'Number') {
-					result[key] = new Intl.NumberFormat(locales, params).format
-				}
+		for (const [key, params] of Object.entries(optionsMap)) {
+			if (params.type === 'DateTime') {
+				result[key] = new Intl.DateTimeFormat(locales, params).format
 			}
+			if (params.type === 'Number') {
+				result[key] = new Intl.NumberFormat(locales, params).format
+			}
+		}
 
-			return result as Result<P>
-		},
-		([] as string[]).concat(locales),
-	)
+		return result as Result<P>
+	}, deps.concat(locales))
 }
