@@ -1,7 +1,7 @@
 {
 	"name": "@hooksbelt/use-timeago",
 	"description": "useTimeago hook",
-	"version": "0.1.3",
+	"version": "0.1.5",
 	"author": "Denis Churbanov",
 	"license": "MIT",
 	"repository": {
