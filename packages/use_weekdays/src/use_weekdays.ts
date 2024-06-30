@@ -1,21 +1,21 @@
 import { useMemo } from 'react'
 import { useIntl } from '@hooksbelt/use-intl'
 
-export interface UseMonthsOptions {
+export interface UseWeekdaysOptions {
 	startFrom?: number
-	type?: 'numeric' | '2-digit' | 'short' | 'long' | 'narrow'
+	type?: 'long' | 'short' | 'narrow'
 }
 
-export const useMonths = (locale: string, options = {} as UseMonthsOptions) => {
+export const useWeekdays = (locale: string, options = {} as UseWeekdaysOptions) => {
 	const { startFrom = 0, type = 'long' } = options
 	const intl = useIntl(locale, {
-		month: { type: 'DateTime', month: type },
+		weekday: { type: 'DateTime', weekday: type },
 	})
 
 	return useMemo(() => {
-		const acc = Array.from({ length: 12 }, (_, i) => {
+		const acc = Array.from({ length: 7 }, (_, i) => {
 			const key = i + 1
-			const name = intl.month(new Date(Date.UTC(2024, i)))
+			const name = intl.weekday(Date.UTC(2001, 0, 1, 12))
 
 			return { key, name }
 		})
