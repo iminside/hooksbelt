@@ -13,9 +13,8 @@ export const useWeekdays = (locale: string, options = {} as UseWeekdaysOptions) 
 	})
 
 	return useMemo(() => {
-		const acc = Array.from({ length: 7 }, (_, i) => {
-			const key = i + 1
-			const name = intl.weekday(Date.UTC(2001, 0, 1, 12))
+		const acc = Array.from({ length: 7 }, (_, key) => {
+			const name = intl.weekday(Date.UTC(2001, 0, key, 12))
 
 			return { key, name }
 		})

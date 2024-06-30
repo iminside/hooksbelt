@@ -13,9 +13,8 @@ export const useMonths = (locale: string, options = {} as UseMonthsOptions) => {
 	})
 
 	return useMemo(() => {
-		const acc = Array.from({ length: 12 }, (_, i) => {
-			const key = i + 1
-			const name = intl.month(new Date(Date.UTC(2024, i)))
+		const acc = Array.from({ length: 12 }, (_, key) => {
+			const name = intl.month(new Date(Date.UTC(2024, key)))
 
 			return { key, name }
 		})
