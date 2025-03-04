@@ -28,9 +28,9 @@
 	},
 	"dependencies": {
 		"mobx": "^6",
-		"react": ">=17.0.0"
+		"react": ">=17"
 	},
 	"devDependencies": {
-		"@types/react": ">=17.0.0"
+		"@types/react": ">=17"
 	}
 }

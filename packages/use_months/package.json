@@ -28,9 +28,9 @@
 	},
 	"dependencies": {
 		"@hooksbelt/use-intl": "^0.2.3",
-		"react": ">=17.0.0"
+		"react": ">=17"
 	},
 	"devDependencies": {
-		"@types/react": ">=17.0.0"
+		"@types/react": ">=17"
 	}
 }
