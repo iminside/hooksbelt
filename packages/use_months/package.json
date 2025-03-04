@@ -1,7 +1,7 @@
 {
 	"name": "@hooksbelt/use-months",
 	"description": "useMonths hook",
-	"version": "0.2.1",
+	"version": "0.2.3",
 	"author": "Denis Churbanov",
 	"license": "MIT",
 	"repository": {
@@ -27,7 +27,7 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@hooksbelt/use-intl": "^0.2.0",
+		"@hooksbelt/use-intl": "^0.2.3",
 		"react": ">=17.0.0"
 	},
 	"devDependencies": {
