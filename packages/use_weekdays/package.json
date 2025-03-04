@@ -1,7 +1,7 @@
 {
 	"name": "@hooksbelt/use-weekdays",
 	"description": "useWeekdays hook",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"author": "Denis Churbanov",
 	"license": "MIT",
 	"repository": {
@@ -27,7 +27,7 @@
 		"access": "public"
 	},
 	"dependencies": {
-		"@hooksbelt/use-intl": "^0.2.3",
+		"@hooksbelt/use-intl": "^0.2.4",
 		"react": "^18"
 	},
 	"devDependencies": {
