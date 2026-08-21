@@ -1,6 +1,14 @@
 import { useMemo, DependencyList } from 'react'
 import { observable, ObservableMap, CreateObservableOptions, IObservableMapInitialValues } from 'mobx'
 
+type ReadonlyMapEntries<K, V> = readonly (readonly [K, V])[]
+
+function isMapEntries<K, V>(
+	initialValues: IObservableMapInitialValues<K, V>,
+): initialValues is ReadonlyMapEntries<K, V> {
+	return Array.isArray(initialValues)
+}
+
 export function useObservableMap<K, V>(
 	initialValues: IObservableMapInitialValues<K, V>,
 	options: CreateObservableOptions,
@@ -27,5 +35,17 @@ export function useObservableMap<K, V>(initialValues: IObservableMapInitialValue
 		}
 	}
 
-	return useMemo(() => observable.map<K, V>(initialValues, { deep: false, ...options }) as ObservableMap<K, V>, deps)
+	return useMemo(() => {
+		const observableOptions = { deep: false, ...options }
+
+		if (initialValues instanceof Map) {
+			return observable.map(initialValues, observableOptions)
+		}
+
+		if (isMapEntries(initialValues)) {
+			return observable.map(initialValues, observableOptions)
+		}
+
+		return observable.map(initialValues, observableOptions)
+	}, deps)
 }
