@@ -19,6 +19,14 @@
 		{
 			"name": "use_months",
 			"path": "../packages/use_months"
+		},
+		{
+			"name": "use_timeago",
+			"path": "../packages/use_timeago"
+		},
+		{
+			"name": "use_weekdays",
+			"path": "../packages/use_weekdays"
 		}
 	],
 	"settings": {
@@ -27,7 +35,7 @@
 			"packages": true
 		},
 		"jest.jestCommandLine": "npm test --",
-		"jest.disabledWorkspaceFolders": ["@hooksbelt", "hooksbelt", "cli", "typescript-plugin-cssx"],
-		"typescript.tsdk": "@hooksbelt\\node_modules\\typescript\\lib"
+		"jest.disabledWorkspaceFolders": ["@hooksbelt", "hooksbelt"],
+		"js/ts.tsdk.path": "@hooksbelt\\node_modules\\typescript\\lib"
 	}
 }
